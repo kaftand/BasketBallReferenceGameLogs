@@ -5,7 +5,7 @@ class Spider(scrapy.Spider):
     name = "careerLogs"
 
     def start_requests(self):
-        yield scrapy.Request(url=f"https://www.basketball-reference.com/players/a/{self.playerCode}.html",
+        yield scrapy.Request(url=f"https://www.basketball-reference.com/players/{self.playerCode[0]}/{self.playerCode}.html",
                              callback=self.findCareers)  #
 
     def findCareers(self, response):
