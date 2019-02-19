@@ -1,7 +1,7 @@
 import scrapy
 from .. import items
 
-class Spider(scrapy.Spider):
+class CareerGameLogsSpider(scrapy.Spider):
     name = "careerLogs"
 
     def start_requests(self):
